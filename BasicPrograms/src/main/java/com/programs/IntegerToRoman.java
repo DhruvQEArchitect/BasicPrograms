@@ -13,7 +13,7 @@ public class IntegerToRoman {
             System.out.print("D");
             getRoman(val - 500);
         } else if (val >= 400) {
-            System.out.print("XD");
+            System.out.print("CD");
             getRoman(val - 400);
         } else if (val >= 100) {
             System.out.print("C");
