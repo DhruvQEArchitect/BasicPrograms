@@ -19,17 +19,17 @@ public class BalancedBrackets {
             switch (str.charAt(i)) {
                 case '}':
                     check = deque.pop();
-                    if (check == ')' || check == ']')
+                    if (check == '(' || check == '[')
                         return false;
                     break;
                 case ')':
                     check = deque.pop();
-                    if (check == '}' || check == ']')
+                    if (check == '{' || check == '[')
                         return false;
                     break;
                 case ']':
                     check = deque.pop();
-                    if (check == ')' || check == '}')
+                    if (check == '(' || check == '{')
                         return false;
                     break;
             }
