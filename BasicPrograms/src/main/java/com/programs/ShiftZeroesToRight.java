@@ -5,18 +5,20 @@ import java.util.Arrays;
 public class ShiftZeroesToRight {
 
     static int[] shiftZeroes(int[] arr) {
-        int nz = 0, z = 0;
-        while (nz < arr.length) {
-            if (arr[nz] != 0) {
-                int temp = arr[nz];
-                arr[nz] = arr[z];
-                arr[z] = temp;
-                z++;
-            } else {
-                nz++;
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                swap(i, count, arr);
+                count++;
             }
         }
         return arr;
+    }
+
+    static void swap(int first, int last, int[] arr) {
+        int temp = arr[first];
+        arr[first] = arr[last];
+        arr[last] = temp;
     }
 
     public static void main(String[] args) {
