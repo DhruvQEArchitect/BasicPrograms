@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+//Contains Duplicate
+
 public class NeetCode1 {
 
     public static boolean hasDuplicate(int[] nums) {

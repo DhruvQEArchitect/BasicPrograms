@@ -3,6 +3,8 @@ package com.neetcode;
 import java.util.Arrays;
 import java.util.HashMap;
 
+//Two Sum
+
 public class NeetCode3 {
 
     public static int[] twoSum(int[] nums, int sum) {
