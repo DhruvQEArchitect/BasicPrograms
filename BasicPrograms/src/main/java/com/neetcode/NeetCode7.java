@@ -20,14 +20,14 @@ public class NeetCode7 {
             int currentLength = 1;
 
             int nextNum = num + 1;
-            while (visitedMap.containsKey(nextNum) && visitedMap.get(nextNum) == false) {
+            while (visitedMap.containsKey(nextNum) && !visitedMap.get(nextNum)) {
                 currentLength++;
                 visitedMap.put(nextNum, Boolean.TRUE);
                 nextNum++;
             }
 
             int prevNum = num - 1;
-            while (visitedMap.containsKey(prevNum) && visitedMap.get(prevNum) == false) {
+            while (visitedMap.containsKey(prevNum) && !visitedMap.get(prevNum)) {
                 currentLength++;
                 visitedMap.put(prevNum, Boolean.TRUE);
                 prevNum--;
