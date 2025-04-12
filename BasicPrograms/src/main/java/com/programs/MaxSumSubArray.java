@@ -3,12 +3,10 @@ package com.programs;
 public class MaxSumSubArray {
 
     static int maxSumSubArray(int[] arr) {
-        int curSum = 0, maxSum = 0;
+        int curSum = 0, maxSum = Integer.MIN_VALUE;
         for (int i = 0; i < arr.length; i++) {
             curSum += arr[i];
-            if (curSum > maxSum) {
-                maxSum = curSum;
-            }
+            maxSum = Math.max(curSum, maxSum);
             if (curSum < 0) {
                 curSum = 0;
             }
