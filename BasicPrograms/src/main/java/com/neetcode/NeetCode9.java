@@ -15,17 +15,18 @@ public class NeetCode9 {
             visitedMap.put(i, Boolean.FALSE);
         }
 
+        int currentLength = 0, nextNum = Integer.MAX_VALUE, prevNum = Integer.MIN_VALUE;
         for (int num : nums) {
-            int currentLength = 1;
+            currentLength = 1;
 
-            int nextNum = num + 1;
+            nextNum = num + 1;
             while (visitedMap.containsKey(nextNum) && !visitedMap.get(nextNum)) {
                 currentLength++;
                 visitedMap.put(nextNum, Boolean.TRUE);
                 nextNum++;
             }
 
-            int prevNum = num - 1;
+            prevNum = num - 1;
             while (visitedMap.containsKey(prevNum) && !visitedMap.get(prevNum)) {
                 currentLength++;
                 visitedMap.put(prevNum, Boolean.TRUE);
