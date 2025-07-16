@@ -4,7 +4,7 @@ public class LeetCode29 {
 
     static int divide(int dividend, int divisor) {
         if (dividend == divisor) return 1;
-        if (dividend == Integer.MIN_VALUE && divisor == 1)
+        if (dividend == Integer.MIN_VALUE && divisor == -1)
             return Integer.MAX_VALUE;
 
         boolean sign = true;
