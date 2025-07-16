@@ -22,10 +22,10 @@ public class LeetCode29 {
             }
             ans += 1 << count;
             n = n - d * (1 << count);
-            if (ans >= Math.pow(2, 31) && sign) return Integer.MAX_VALUE;
-
-            if (ans >= Math.pow(2, 31) && !sign) return Integer.MIN_VALUE;
         }
+         if (ans >= Math.pow(2, 31) && sign) return Integer.MAX_VALUE;
+
+        if (ans >= Math.pow(2, 31) && !sign) return Integer.MIN_VALUE;
         return sign ? (int) ans : (int) -ans;
     }
 }
